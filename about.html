@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Adbeam</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">A</div>
+        Adbeam
+      </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Recycling Tracker.html">Recycling Tracker</a></li>
+      <li><a href="recycling_guide.html">Recycling Guide</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <div class="auth-buttons">
+    <a href="#" class="btn btn-text">Sign in</a>
+    <a href="#" class="btn btn-primary">Get started</a>
+  </div>
+</div>
+</header>
+  <section class="about-hero">
+    <div class="container">
+      <h1>Our Mission</h1>
+      <p>Adbeam is transforming campus sustainability through innovative recycling rewards programs.</p>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <h2>Meet the Team</h2>
+      <div class="team-members" id="team-container"></div>
+    </div>
+  </section>
+
+  <footer>
+    <!-- Same footer as index.html -->
+  </footer>
+<script type="module" src="index.js"></script>
+  <script>
+    
+    // Team data
+    const team = [
+      { name: "Alex Johnson", role: "CEO", bio: "Sustainability enthusiast with 10+ years in edtech." },
+      { name: "Sam Lee", role: "CTO", bio: "Tech lead focused on building impactful solutions." },
+      { name: "Taylor Smith", role: "Campus Relations", bio: "Connecting with universities nationwide." }
+    ];
+
+    // Populate team
+    const container = document.getElementById('team-container');
+    team.forEach(member => {
+      container.innerHTML += `
+        <div class="team-member">
+          <img src="/api/placeholder/200/200" alt="${member.name}">
+          <h3>${member.name}</h3>
+          <p class="role">${member.role}</p>
+          <p class="bio">${member.bio}</p>
+        </div>
+      `;
+    });
+  </script>
+  <script src="/js/index.js"></script>
+</body>
+</html>
