@@ -500,41 +500,8 @@ How do I redeem my points for rewards?
     </div>
   </div>
 </footer>
-<script>
-    // FAQ toggle functionality
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        const icon = question.querySelector('svg');
-        
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-        icon.style.transform = answer.style.display === 'block' ? 'rotate(180deg)' : 'rotate(0)';
-      });
-    });
-  
-    // Material card hover effects
-    document.querySelectorAll('.material-card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-5px)';
-        card.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.08)';
-      });
-      
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-        card.style.boxShadow = '';
-      });
-    });
-  
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
 </body>
 
 </html>
